@@ -1,0 +1,123 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="Z_FANS_STAD_MANG_SRV" xml:lang="fr" sap:schema-version="1">
+			<EntityType Name="zperson" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Mandant" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Nom" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Prenom" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Prénom" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DateNaissance" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="AdresseMail" Type="Edm.String" Nullable="false" MaxLength="241" sap:unicode="false" sap:label="Adresse e-mail"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NumeroTelephone" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="N° de portable"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Adresse" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Adresse" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Role" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Sexe" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="EtatFan" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="IdEquipe" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zpublication" sap:content-version="1">
+				<Key><PropertyRef Name="IdPublication"/></Key><Property Name="IdPublication" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="TypePublication" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DatePublication" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Contenu" Type="Edm.String" Nullable="false" MaxLength="29" sap:unicode="false" sap:label="Nom de zone" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdPersonne" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zbillet" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Prix" Type="Edm.Decimal" Nullable="false" Precision="23" Scale="9" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdMatch" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdCategorie" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdChaise" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdPer" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zmatch" sap:content-version="1">
+				<Key><PropertyRef Name="IdMatch"/></Key><Property Name="IdMatch" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="DateMatch" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="LocalisationStade" Type="Edm.String" Nullable="false" MaxLength="128" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NbreBillets" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Nombre" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdEquipe1" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdEquipe2" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zalerte" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="TypeAlerte" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Provenance" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdUser" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdCamera" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PositionUser" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Nombre entier" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zstade" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="NbreChaises" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Nombre" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Localisation" Type="Edm.String" Nullable="false" MaxLength="128" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zchaise" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Etat" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="IdCategorie" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zcategorie" sap:content-version="1">
+				<Key><PropertyRef Name="IdCategorie"/></Key><Property Name="IdCategorie" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="NomStade" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Camera" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Nombre entier" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Capteur" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Nombre entier" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zcompte" sap:content-version="1">
+				<Key><PropertyRef Name="IdPersonne"/></Key><Property Name="IdPersonne" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Login" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Benutzer" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MotPasse" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Mot de passe"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="EtatCompte" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zequipe" sap:content-version="1">
+				<Key><PropertyRef Name="IdEquipe"/></Key><Property Name="IdEquipe" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Intitule" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zporte" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Nom" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="IdStade" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zcapteur" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdChaise" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="ztcamera" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="IdCategorie" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Formation"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="zmedia" m:HasStream="true" sap:content-version="1">
+				<Key><PropertyRef Name="IdAlerte"/></Key><Property Name="Filename" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Mimetype" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="IdAlerte" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Value" Type="Edm.Binary" Nullable="false" sap:unicode="false" sap:label="Données" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<ComplexType Name="z_acheter_billet_return"><Property Name="PIdCategorie" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Formation" sap:creatable="false"
+				sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PIdFan" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Formation" sap:creatable="false" sap:updatable="false"
+				sap:sortable="false" sap:filterable="false"/><Property Name="PIdChaise" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Formation" sap:creatable="false"
+				sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PIdMatch" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Formation" sap:creatable="false" sap:updatable="false"
+				sap:sortable="false" sap:filterable="false"/></ComplexType>
+			<ComplexType Name="z_partager_publication_return"><Property Name="test" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Variable booléenne (X=vrai, -=faux, espace=inconnu)"
+				sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></ComplexType>
+			<EntityContainer Name="Z_FANS_STAD_MANG_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="zpersonSet" EntityType="Z_FANS_STAD_MANG_SRV.zperson" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zpublicationSet" EntityType="Z_FANS_STAD_MANG_SRV.zpublication" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="zbilletSet" EntityType="Z_FANS_STAD_MANG_SRV.zbillet" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zmatchSet" EntityType="Z_FANS_STAD_MANG_SRV.zmatch" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zalerteSet" EntityType="Z_FANS_STAD_MANG_SRV.zalerte" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zstadeSet" EntityType="Z_FANS_STAD_MANG_SRV.zstade" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zchaiseSet" EntityType="Z_FANS_STAD_MANG_SRV.zchaise" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zcategorieSet" EntityType="Z_FANS_STAD_MANG_SRV.zcategorie" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="zcompteSet" EntityType="Z_FANS_STAD_MANG_SRV.zcompte" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zequipeSet" EntityType="Z_FANS_STAD_MANG_SRV.zequipe" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zporteSet" EntityType="Z_FANS_STAD_MANG_SRV.zporte" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zcapteurSet" EntityType="Z_FANS_STAD_MANG_SRV.zcapteur" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="ztcameraSet" EntityType="Z_FANS_STAD_MANG_SRV.ztcamera" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="zmediaSet" EntityType="Z_FANS_STAD_MANG_SRV.zmedia" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/>
+				<FunctionImport Name="zfm_acheter_billet" ReturnType="Z_FANS_STAD_MANG_SRV.z_acheter_billet_return" m:HttpMethod="GET"><Parameter Name="pIdCategorie" Type="Edm.String" Mode="In" MaxLength="8"/><Parameter Name="pIdFan" Type="Edm.String" Mode="In" MaxLength="8"/><Parameter Name="pIdMatch" Type="Edm.String" Mode="In" MaxLength="8"/><Parameter Name="pIdChaise" Type="Edm.String" Mode="In" MaxLength="8"/></FunctionImport>
+				<FunctionImport Name="zfm_partager_publication" ReturnType="Z_FANS_STAD_MANG_SRV.z_partager_publication_return" m:HttpMethod="GET"><Parameter Name="type_pub" Type="Edm.String" Mode="In" MaxLength="10"/><Parameter Name="date_pub" Type="Edm.DateTime" Mode="In" Precision="0"/><Parameter Name="id_personne" Type="Edm.String" Mode="In"/><Parameter Name="contenu" Type="Edm.String" Mode="In"/></FunctionImport>
+			</EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/Z_FANS_STAD_MANG_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/Z_FANS_STAD_MANG_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

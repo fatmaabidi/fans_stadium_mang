@@ -38,19 +38,14 @@
       "description": "SAPUI5 Test Resources"
     },
     {
-
       "path": "/sap/opu/odata",
-
       "target": {
-
         "type": "destination",
-
         "name": "ADE",
-
         "entryPath": "/sap/opu/odata"
-
       },
-    "description": "ADE FIORI HANA"
-  }],
+      "description": "ADE FIORI HANA"
+    }
+  ],
   "sendWelcomeFileRedirect": true
 }

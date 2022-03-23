@@ -5,6 +5,7 @@ sap.ui.define([
 
 	return Controller.extend("stadium.stadium.controller.View1", {
 		onInit: function () {
+			
 
 		}
 	});
