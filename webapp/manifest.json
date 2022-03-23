@@ -9,6 +9,7 @@
 		},
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
+		
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
