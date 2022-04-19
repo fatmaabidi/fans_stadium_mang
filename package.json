@@ -11,7 +11,10 @@
   },
   "ui5": {
     "dependencies": [
-      "@sap/ui5-builder-webide-extension"
+      "@sap/ui5-builder-webide-extension",
+      "@openui5/themelib_sap_fiori_3",
+    "@openui5/sap.m",
+    "@openui5/sap.ui.core"
     ]
   },
   "private": "true"

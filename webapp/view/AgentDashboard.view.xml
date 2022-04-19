@@ -1,0 +1,43 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="stadium.stadium.controller.AgentDashboard" xmlns="sap.m" xmlns:f="sap.f"
+	xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+	<tnt:ToolPage id="toolPage" sideExpanded="false">
+		<tnt:header>
+			<f:ShellBar title="{i18n>appTitle}" secondTitle="{i18n>appDescription}" showMenuButton="true" homeIcon="img/Bastide_Logo.png"
+				menuButtonPressed="onMenuButtonPress">
+				<f:menu>
+					<Menu>
+						<MenuItem text="Flight booking" icon="sap-icon://flight"/>
+						<MenuItem text="Car rental" icon="sap-icon://car-rental"/>
+					</Menu>
+				</f:menu>
+				<f:profile>
+					<f:Avatar id="avatarGroup" press="onProfilePress" src="{items>src}"/>
+				</f:profile>
+				<f:additionalContent>
+					<Button press="onLogoff" icon="sap-icon://log"/>
+				</f:additionalContent>
+			</f:ShellBar>
+		</tnt:header>
+		<tnt:sideContent>
+			<tnt:SideNavigation expanded="false" itemSelect="onItemSelect">
+				<tnt:NavigationList expanded="false">
+					<tnt:NavigationListItem id="CmdFourNavItem_id" visible="true" text="Introduction" key="{i18n>CMDFourKey}" icon="sap-icon://information"
+						enabled="true"></tnt:NavigationListItem>
+					<tnt:NavigationListItem id="HistoriqueCmdFourNavItem_id" visible="true" text="Calendrier" key="{i18n>HistoriqueCMDFourKey}"
+						icon="sap-icon://customer-history" enabled="true"></tnt:NavigationListItem>
+					<tnt:NavigationListItem id="SuiviCmdFourNavItem_id" visible="true" text="Match" key="{i18n>SuiviCMDFourKey}" icon="sap-icon://validate"
+						enabled="true"></tnt:NavigationListItem>
+					<tnt:NavigationListItem id="HistoriqueValidatorNavItem_id" visible="true" text="Offres" key="{i18n>HistoriqueValidatorKey}"
+						icon="sap-icon://customer-history" enabled="true"></tnt:NavigationListItem>
+					<tnt:NavigationListItem id="alerte_id" visible="true" text="Alerte" key="{i18n>SuiviCMDFourKey}" icon="sap-icon://validate" enabled="true"></tnt:NavigationListItem>
+					<tnt:NavigationListItem id="forum_id" visible="true" text="Forum" key="{i18n>SuiviCMDFourKey}" icon="sap-icon://validate" enabled="true"></tnt:NavigationListItem>
+				</tnt:NavigationList>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<ScrollContainer>
+				
+			</ScrollContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</mvc:View>

@@ -1,1 +1,19 @@
-/* Enter your custom styles here */
+.sapUiContentPadding{
+	width:"500px";
+	height:"500px";
+}
+.tile{
+	width:300px;
+	
+}
+.sapMGT {
+	margin:10px;
+	height:200px;
+}
+.sapMGT.TwoByOne {
+    width: 49.5rem;
+    height: 14rem;
+}
+.img{
+	mode: background;
+}

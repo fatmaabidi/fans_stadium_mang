@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout">
+	<f:Card>
+		<f:content>
+			<l:VerticalLayout class="sapUiContentPadding">
+				<HBox alignItems="Center">
+					<f:Avatar src="{personData>/src}"
+							initials="{personData>/initials}"
+							fallbackIcon="{personData>/fallbackIcon}"
+							backgroundColor="{personData>/backgroundColor}" />
+					<VBox class="sapUiTinyMarginBegin">
+						<Title text="abidi fatma" />
+						<Text text="ehgffhj" />
+					</VBox>
+				</HBox>
+				<Title text="Contact Details"/>
+				<Label text="Mobile" />
+				<Text text="2548957" />
+				<Label text="Phone" />
+				<Text text="4512963" />
+				<Label text="Email" />
+				<Text text="fatma@gmail.com" />
+				<Button text="Settings"
+						press="onDefaultDialogPress"	>
+					
+				</Button>
+			</l:VerticalLayout>
+		</f:content>
+	</f:Card>
+</core:FragmentDefinition>

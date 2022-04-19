@@ -1,0 +1,85 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="stadium.stadium.controller.PageAcceuil" xmlns="sap.m" xmlns:f="sap.f"
+	xmlns:tnt="sap.tnt" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<tnt:ToolPage id="toolPage" sideExpanded="false">
+					<tnt:header>
+						<f:ShellBar title="{i18n>appTitle}" secondTitle="{i18n>appDescription}" showMenuButton="true" homeIcon="img/Bastide_Logo.png"
+							menuButtonPressed="onMenuButtonPress">
+							<f:menu>
+								<Menu>
+									<MenuItem text="Flight booking" icon="sap-icon://flight"/>
+									<MenuItem text="Car rental" icon="sap-icon://car-rental"/>
+								</Menu>
+							</f:menu>
+							<f:profile>
+								<f:Avatar id="avatarGroup" press="onProfilePress" src="{items>src}"/>
+							</f:profile>
+							<f:additionalContent>
+								<Button press="onLogoff" icon="sap-icon://log"/>
+							</f:additionalContent>
+						</f:ShellBar>
+					</tnt:header>
+					<tnt:sideContent>
+						<tnt:SideNavigation expanded="false" itemSelect="onItemSelect">
+							<tnt:NavigationList expanded="false">
+								<tnt:NavigationListItem id="Intro_id" select="onClick_intro" visible="true" text="Introduction" key="{i18n>CMDFourKey}"
+									icon="sap-icon://information" enabled="true"></tnt:NavigationListItem>
+								<tnt:NavigationListItem id="HistoriqueCmdFourNavItem_id" visible="true" text="Calendrier" key="{i18n>HistoriqueCMDFourKey}"
+									icon="sap-icon://customer-history" enabled="true"></tnt:NavigationListItem>
+								<tnt:NavigationListItem id="SuiviCmdFourNavItem_id" visible="true" text="Match" key="{i18n>SuiviCMDFourKey}" icon="sap-icon://validate"
+									enabled="true"></tnt:NavigationListItem>
+								<tnt:NavigationListItem id="HistoriqueValidatorNavItem_id" visible="true" text="Offres" key="{i18n>HistoriqueValidatorKey}"
+									icon="sap-icon://customer-history" enabled="true"></tnt:NavigationListItem>
+								<tnt:NavigationListItem id="alerte_id" visible="true" text="Alerte" key="{i18n>SuiviCMDFourKey}" icon="sap-icon://validate" enabled="true"></tnt:NavigationListItem>
+								<tnt:NavigationListItem id="forum_id" select="onClick_forum" visible="true" text="Forum" key="{i18n>SuiviCMDFourKey}"
+									icon="sap-icon://discussion" enabled="true"></tnt:NavigationListItem>
+									<tnt:NavigationListItem id="dashboard_id" select="onClick_dashboard" visible="true" text="Forum" key="{i18n>SuiviCMDFourKey}"
+									icon="sap-icon://discussion" enabled="true"></tnt:NavigationListItem>
+							</tnt:NavigationList>
+						</tnt:SideNavigation>
+					</tnt:sideContent>
+					<tnt:mainContents>
+						<NavContainer class="navigation" id="pageContainer">
+							<pages height="100%">
+								<ScrollContainer id="root1" horizontal="false" vertical="true" height="100%">
+									<Carousel class="sapUiContentPadding" loop="true" height="400px">
+										<Image src="https://www.bettingreviews.bet/fr/wp-content/uploads/sites/2/2022/02/stade-de-foot.jpeg" alt="Example picture of speakers"/>
+										<Image src="https://www.bettingreviews.bet/fr/wp-content/uploads/sites/2/2022/02/stade-de-foot.jpeg"
+											alt="Example picture of USB flash drive"/>
+										<Image src="https://www.bettingreviews.bet/fr/wp-content/uploads/sites/2/2022/02/stade-de-foot.jpeg" alt="Example picture of spotlight"/>
+										<Image src="https://www.bettingreviews.bet/fr/wp-content/uploads/sites/2/2022/02/stade-de-foot.jpeg" alt="Example picture of screw"/>
+									</Carousel>
+									<HBox>
+										<StandardTile class="tile" icon="sap-icon://account" type="Monitor" title="Profile" press="startservice"/>
+										<StandardTile class="tile" icon="sap-icon://basket" type="Monitor" title="Panier" press="serviceusage"/>
+										<GenericTile class="genericTile"
+											backgroundImage="https://www.boulognebillancourt.com/fileadmin/_processed_/9/3/csm_terrain_de_foot_57fb03658a.jpeg" frameType="TwoByOne"
+											press="press">
+											<TileContent footer="August 21, 2016">
+												<NewsContent contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com" subheader="Today, SAP News"/>
+											</TileContent>
+										</GenericTile>
+									</HBox>
+									<HBox>
+										<StandardTile class="tile" icon="Images/gas.png" type="Create" number="233" numberUnit="dollars" title="Tile 3" info="Paid"
+											infoState="Success" press="bill"/>
+										<StandardTile class="tile" icon="Images/gas.png" type="Create" number="233" numberUnit="dollars" title="Tile 3" info="Paid"
+											infoState="Success" press="bill"/>
+										<GenericTile backgroundImage="https://www.lesaviezvous.net/wp-content/uploads/2016/01/but-record-football.jpg" frameType="TwoByOne"
+											press="press">
+											<TileContent footer="August 21, 2016">
+												<NewsContent contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com" subheader="Today, SAP News"/>
+											</TileContent>
+										</GenericTile>
+									</HBox>
+								</ScrollContainer>
+							</pages>
+						</NavContainer>
+					</tnt:mainContents>
+				</tnt:ToolPage>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
